@@ -1,0 +1,8 @@
+{
+  "name": "CampagneStreetArt",
+  "app_id": "4d044e52",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
