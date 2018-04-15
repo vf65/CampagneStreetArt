@@ -14,3 +14,21 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.tabs-md .tab-button{
+    background: map-get($colors, dark);
+}
+
+.tabs-md .tab-button-icon,
+.tabs-md .tab-button{
+    color:map-get($colors, primary);
+}
+
+.tabs-md .tab-button[aria-selected=true]{
+    background: map-get($colors, light);
+}
+
+.tabs-md .tab-button {
+    min-height: 10rem;
+}
+
