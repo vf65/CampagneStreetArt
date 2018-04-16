@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-proxim',
+  templateUrl: 'proxim.html'
 })
-export class HomePage {
+export class ProximPage {
 
   constructor(public navCtrl: NavController) {
 

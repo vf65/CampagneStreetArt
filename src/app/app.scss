@@ -15,6 +15,26 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+@font-face {
+    font-family: 'Courier Prime';
+    src: url('../assets/fonts/CourierPrime.eot');
+    src: url('../assets/fonts/CourierPrime.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/CourierPrime.woff') format('woff'),
+        url('../assets/fonts/CourierPrime.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Courier Prime';
+    src: url('../assets/fonts/CourierPrime-Bold.eot');
+    src: url('../assets/fonts/CourierPrime-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/CourierPrime-Bold.woff') format('woff'),
+        url('../assets/fonts/CourierPrime-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 .tabs-md .tab-button{
     background: map-get($colors, dark);
 }
@@ -32,3 +52,10 @@
     min-height: 10rem;
 }
 
+.tabs-md .tab-button-text{
+    font-weight: bold;
+}
+
+.tabs-md .tab-button-icon{
+    font-size: 4rem;
+}
