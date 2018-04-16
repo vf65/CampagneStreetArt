@@ -35,27 +35,27 @@
     font-style: normal;
 }
 
-.tabs-md .tab-button{
+.tab-button{
     background: map-get($colors, dark);
 }
 
-.tabs-md .tab-button-icon,
-.tabs-md .tab-button{
+.tab-button-icon,
+.tab-button{
     color:map-get($colors, primary);
 }
 
-.tabs-md .tab-button[aria-selected=true]{
-    background: map-get($colors, light);
+.tab-button[aria-selected=true]{
+    background: map-get($colors, light)!important;
 }
 
-.tabs-md .tab-button {
+.tab-button {
     min-height: 10rem;
 }
 
-.tabs-md .tab-button-text{
+.tab-button-text{
     font-weight: bold;
 }
 
-.tabs-md .tab-button-icon{
+.tab-button-icon{
     font-size: 4rem;
 }
