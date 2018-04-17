@@ -41,15 +41,19 @@
 
 .tab-button-icon,
 .tab-button{
-    color:map-get($colors, primary);
+    color:map-get($colors, primary)!important;
+}
+
+.enable-hover a:hover{
+    opacity: 1;
 }
 
 .tab-button[aria-selected=true]{
-    background: map-get($colors, light)!important;
+    background: map-get($colors, light);
 }
 
 .tab-button {
-    min-height: 10rem;
+    min-height: 10rem!important;
 }
 
 .tab-button-text{
@@ -58,4 +62,8 @@
 
 .tab-button-icon{
     font-size: 4rem;
+}
+
+.tabs-ios .tab-button{
+    font-size:12px;
 }

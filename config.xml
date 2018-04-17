@@ -3,7 +3,7 @@
     <name>CampagneStreetArt</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://192.168.1.89:8100" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -82,5 +82,12 @@
     <plugin name="cordova-plugin-ionic-webview" spec="^1.2.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
     <plugin name="cordova-plugin-statusbar" spec="^2.4.1" />
+    <allow-navigation href="http://192.168.1.89:8100" />
+    <plugin name="cordova-plugin-googlemaps" spec="^2.2.9">
+        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyAUR5AjLYRoypkpi_6cfv62Qa9mkJqS5LE" />
+        <variable name="API_KEY_FOR_IOS" value="AIzaSyBxHtzta8h5p4Y7cK6o-uUKTBK_h8gNM08" />
+    </plugin>
+    <engine name="android" />
+    <engine name="ios" />
     <engine name="browser" spec="5.0.3" />
 </widget>
