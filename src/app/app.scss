@@ -67,3 +67,52 @@
 .tabs-ios .tab-button{
     font-size:12px;
 }
+
+ion-list .item-block ion-icon[name=marker]{
+    background: url(../assets/imgs/marker.png) no-repeat center;
+    background-size: contain;
+    margin: 8px 13px 8px 0;
+}
+
+ion-list .item-block .item-inner{
+    margin-left:0!important;
+}
+
+.note-ios {
+    color: #ffffff!important;
+}
+
+ion-list .item-block{
+    min-height: 8rem;  
+}
+
+ion-list .item-block:nth-child(even){
+    background:#252525;
+}
+
+ion-list .item-block:nth-child(odd){
+    background:#000000;
+}
+
+ion-list .item-block ion-label,
+ion-list .item-block ion-icon,
+ion-list .item-block .note-md{
+    color:#fff;
+}
+
+ion-list .item-block ion-label{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+ion-list .item-block ion-note{
+    font-style: italic;
+}
+
+ion-content.content{
+    background-color: #000;
+}
+
+.tabs-ios .tabbar{
+    border-top:none;
+}

@@ -1,0 +1,16 @@
+<ion-content>
+
+  <ion-list no-border no-lines>
+
+      <ion-item *ngFor="let location of artworkList">
+          <ion-icon name='marker' item-start></ion-icon>
+          {{location.name}}
+          <ion-note item-end>
+          {{location.distance}}
+          </ion-note>
+      </ion-item>
+
+
+  </ion-list>
+
+</ion-content>

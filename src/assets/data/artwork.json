@@ -1,0 +1,779 @@
+{
+	"artworks": [
+		{
+			"name": "Quesnoy-le-Montant",
+			"videos": [
+				{
+					"description": "Cette arracheuse à betterave tirée par le tracteur a plusieurs fonctions : couper le collet de la betterave, éparpiller les feuilles, déterrer la betterave, nettoyer la betterave de la terre, grâce à différents systèmes tournants et au transporteur à barre.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Culture de la betterave",
+							"filmmakers": "Jacques Montier",
+							"date": "1950-1952",
+							"place": "Pays du Vimeu",
+							"Coloring": "Noir et blanc",
+							"Son": "Muet",
+							"Format": "16 mm",
+							"Durée": "1’37"
+						}
+					]
+				}
+			],
+			"latitude": 50.1094065886716,
+			"longitude": 1.68732546667718
+		},
+		{
+			"name": "Yzengremer",
+			"videos": [
+				{
+					"description": "En 1980, la direction et les enseignantes constatent une baisse d'effectif grandissante et continue. Francis Isaac est alors responsable des parents d'élèves de l'école maternelle Jacques Prévert. Afin d'enrayer ce déclin, Francis Isaac propose de réaliser un film qui serait diffusé ensuite lors des portes ouvertes et des réunions pour valoriser les deux écoles. Nous assistons ici à deux scènes tournées en classe primaire à l’école Georges Sand.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Ecole primaire Georges Sand",
+							"filmmakers": "Francis Isaac",
+							"date": "1980-1982",
+							"place": "Friville-Escarbotin",
+							"Coloring": "Couleur",
+							"Son": "Sonore",
+							"Format": "Super 8",
+							"Durée": "1’12"
+						}
+					]
+				}
+			],
+			"latitude": 50.06157209660103,
+			"longitude": 1.521533547815693
+		},
+		{
+			"name": "Tully",
+			"videos": [
+				{
+					"description": "« La classe » représente ici les jeunes appelés pour le service militaire obligatoire. Les jeunes adolescents fêtent cet appel qui marque leur passage vers l’âge adulte.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "La Classe",
+							"filmmakers": "Jacques Montier",
+							"date": "1950-1952",
+							"place": "Friville-Escarbotin",
+							"Coloring": "Noir et blanc",
+							"Son": "Muet",
+							"Format": "16 mm",
+							"Durée": "1’02"
+						}
+					]
+				}
+			],
+			"latitude": 50.0847583838329,
+			"longitude": 1.516711413860321
+		},
+		{
+			"name": "Béthencourt-sur-Mer",
+			"videos": [
+				{
+					"description": "Ce film d’entreprise permet de représenter les différentes étapes de réalisation des serrures au sein de l’entreprise Guerville-Riquier, située à Fressenneville. Réalisé à la demande de Jean-Charles Girode, directeur commercial de la serrurerie, ce film a été présenté en 1967 et 1968 dans les foires expos liées au bâtiment.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Ets Guerville Riquier",
+							"filmmakers": "Les Films Eschlimann",
+							"date": "1967",
+							"place": "Fressenneville",
+							"Coloring": "Couleur",
+							"Son": "Sonore",
+							"Format": "16 mm et Super 8",
+							"Durée": "0’53"
+						}
+					]
+				}
+			],
+			"latitude": 50.0778378134085,
+			"longitude": 1.5009676073923401
+		},
+		{
+			"name": "Acheux-en-Vimeu",
+			"videos": [
+				{
+					"description": "Le cercle artistique d’Escarbotin propose une représentation théâtrale au Mignon Palace. On reconnaît Serge Caron, coiffeur d’Escarbotin et membre fondateur du cercle artistique.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Aux feux de la rampe",
+							"filmmakers": "Jacques Montier",
+							"date": "1951-1952",
+							"place": "Friville-Escarbotin",
+							"Coloring": "Noir et blanc",
+							"Son": "Muet",
+							"Format": "16 mm",
+							"Durée": "1’02"
+						}
+					]
+				}
+			],
+			"latitude": 50.065675812927395,
+			"longitude": 1.6760327662010468
+		},
+		{
+			"name": "Chépy",
+			"videos": [
+				{
+					"description": "Le cercle artistique d’Escarbotin organise un bal au profit des déportés. Ce soir là Jacques Montier, le cinéaste, est déguisé en Juliette Gréco.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Bal au Mignon Palace",
+							"filmmakers": "Jacques Montier",
+							"date": "1951",
+							"place": "Friville-Escarbotin",
+							"Coloring": "Noir et blanc",
+							"Son": "Muet",
+							"Format": "16 mm",
+							"Durée": "0’57"
+						}
+					]
+				}
+			],
+			"latitude": 50.06384860850142,
+			"longitude": 1.646474749616118
+		},
+		{
+			"name": "Fressenneville",
+			"videos": [
+				{
+					"description": "En ce mois de juillet 1953 le Tour de France traverse le bourg de Fressenneville. Les caravanes aux allures futuristes précèdent les cyclistes.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Tour de France",
+							"filmmakers": "Jean-Charles Girode",
+							"date": "1953",
+							"place": "Fressenneville",
+							"Coloring": "Noir et blanc",
+							"Son": "Muet",
+							"Format": "8 mm",
+							"Durée": "1’01"
+						}
+					]
+				}
+			],
+			"latitude": 50.07027686566769,
+			"longitude": 1.577485286024853
+		},
+		{
+			"name": "Tours-en-Vimeu",
+			"videos": [
+				{
+					"description": "Jacques Montier, caméraman attitré du ciné-club d’Escarbotin réalise avec ses camarades les actualités du Vimeu. Ils nous restituent ici ce match de foot dominical, qui rassemblent de nombreux spectateurs venus soutenir leur équipe respective.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Match de foot",
+							"filmmakers": "Jacques Montier",
+							"date": "1950-1952",
+							"place": "Friville-Escarbotin",
+							"Coloring": "Noir et blanc",
+							"Son": "Muet",
+							"Format": "16 mm",
+							"Durée": "0’45"
+						}
+					]
+				}
+			],
+			"latitude": 50.03497911993186,
+			"longitude": 1.6810502767864364
+		},
+		{
+			"name": "Valines",
+			"videos": [
+				{
+					"description": "Défilé des communiants et communiantes puis des parents à la sortie de l'église de Feuquières-en-Vimeu. Un film au format 17,5 mm d’une rare qualité et très bien conservé. « Durant l’entre-deux guerres, la religion catholique reste un ciment des communautés rurales, dans l'ensemble moins touchées par le recul des pratiques religieuses, notamment en ce qui concerne les sacrements, qui se traduisent par des pratiques collectives et ostentatoires, comme ici à Feuquières. » Julien Cahon, historien et enseignant-chercheur.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Première Communion",
+							"filmmakers": "Anonyme",
+							"date": "1930",
+							"place": "Feuquières en Vimeu",
+							"Coloring": "Noir et blanc",
+							"Son": "Muet",
+							"Format": "17,5 mm",
+							"Durée": "0’46"
+						}
+					]
+				},
+				{
+					"description": "La célébration a lieu à l’église d’Escarbotin. Les communiants défilent ensuite dans les rues de la commune. On voit apparaître le Suisse d’église, encore présent dans les cortèges religieux au cours des années 1950.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Communions",
+							"filmmakers": "Jacques Montier",
+							"date": "1951-1952",
+							"place": "Friville-Escarbotin",
+							"Coloring": "Noir et blanc",
+							"Son": "Muet",
+							"Format": "16 mm",
+							"Durée": "1’19"
+						}
+					]
+				}
+			],
+			"latitude": 50.03497911993186,
+			"longitude": 1.6810502767864364
+		},
+		{
+			"name": "Behen",
+			"videos": [
+				{
+					"description": "« Ce film montre le déroulement d'un scrutin dans un bureau de vote (opération de vote et dépouillement) et le matériel électoral (cartes d'électeurs, bulletins, urne, isoloir), au début de la IV République. Les femmes ont le droit de vote depuis quelques années seulement. Il pourrait s’agir ici des élections législatives du 17 juin 1951. » Julien Cahon",
+					"learnmore": "« Il y a eu des élections cantonales en 1951, mais en octobre et Friville-Escarbotin (canton d'Ault à l'époque) ne faisait pas partie des cantons renouvelables (ils l'étaient par moitié tous les 4 ans). En 1951, les électeurs sont appelés aux urnes pour élire les députés de la deuxième législature de la IVe République (la première élue en 1946 arrivant à son terme) et inaugurent un nouveau système électoral, le système des apparentements, dans le cadre d'un scrutin départemental de liste à la proportionnelle. Ce système des apparentements permettait à deux ou plusieurs listes de souscrire, dans le cadre départemental, une déclaration d’apparentement leur permettant d’être considérées comme une seule liste lors de l’attribution des sièges ; la loi prévoyait aussi que si une liste ou un groupe de listes apparentées obtenaient la majorité absolue, elles recevaient tous les sièges. Ce système était destiné à favoriser les partis au gouvernement (SFIO, MRP, UDSR, Radicaux, droite modérée), coalisés dans la \"Troisième force\" pour faire face à l'opposition du PCF et du RPF, la formation gaulliste. Si le système fonctionne puisque la majorité sortante de troisième force recueille la majorité des suffrages, communistes et gaullistes réalisent aussi des scores élevés, qui contrastent en réalité avec le tassement de la gauche socialiste. Par exemple, dans la Somme, la SFIO poursuivait sa chute : 30,6 % des suffrages exprimés en 1945, 26 % puis 23,7 % en 1946 et 21,6 % en 1951. Malgré cette érosion, la SFIO réalisait dans le département un score supérieur à la moyenne nationale de 7 points. Le PCF de René Lamps et Louis Prot, qui dénonçait le « scrutin de trucage », se maintenait à 32 % dans la Somme et pointaient en tête localement, loin devant la liste socialiste. La liste gaulliste conduite par André-Jean Godin (député sortant et transfuge radical) réalisait une percée spectaculaire (17,7 %), devancée de peu par la liste RGR-CNIP, emmenée par Pierre Garet (député sortant, ex-MRP) et Marcelle Delabie (18 %). Cette alliance du centre-gauche et du centre-droit leur permit de maintenir leurs positions face au gaullisme. La liste MRP de Jules Delemotte, apparentée à la SFIO, au RGR et au CNIP dans la Somme, perdait une part très importante de ses soutiens, ne recueillant que 8 % des suffrages. Malgré une redistribution des voix, tous les députés sortants furent réélus : Louis Prot et René Lamps (PCF), Max Lejeune et Pierre Doutrellot (SFIO) puis avec des étiquettes différentes, Pierre Garet (CNIP) et André-Jean Godin (RPF). Le Parti radical-socialiste et le MRP perdaient donc cependant un siège chacun. Le système des apparentements, qui a donné les résultats escomptés sur le plan national en enlevant 50 sièges au PCF et 25 au RPF par rapport à l'assemblée précédent, n’a pas donné de résultats dans la Somme, mais en accoucha d’une assemblée instable. Le renversement du gouvernement Edgar Faure (29 novembre 1955) lui permit de dissoudre l’Assemblée nationale, pratique inédite depuis celle décidée par le maréchal de Mac-Mahon le 16 mai 1877. Des élections législatives anticipées furent fixées au 2 janvier 1956. » Julien Cahon Historien et maître de conférence à l’Université de Picardie Jules Verne",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Elections",
+							"filmmakers": "Jacques Montier",
+							"date": "1951",
+							"place": "Friville-Escarbotin",
+							"Coloring": "Noir et blanc",
+							"Son": "Muet",
+							"Format": "16 mm",
+							"Durée": "1’06"
+						}
+					]
+				}
+			],
+			"latitude": 50.05680822476641,
+			"longitude": 1.7564684614289945
+		},
+		{
+			"name": "Moyenneville",
+			"videos": [
+				{
+					"description": "Le repas des ainés a lieu à l’Hôtel du Cheval Blanc à Escarbotin, au printemps. Mme Micheline Debenest, membre du conseil municipal, organise ce repas des aînés. On reconnaît également M. Verniot, M. Denisot et le maire de Friville-Escarbotin.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Repas des aînés",
+							"filmmakers": "Jacques Montier",
+							"date": "1950-1952",
+							"place": "Friville-Escarbotin",
+							"Coloring": "Noir et blanc",
+							"Son": "Muet",
+							"Format": "16 mm",
+							"Durée": "1’10"
+						}
+					]
+				}
+			],
+			"latitude": 50.072177494615964,
+			"longitude": 1.7496460147151538
+		},
+		{
+			"name": "Méneslies",
+			"videos": [
+				{
+					"description": "Remise d'un drapeau aux anciens combattants de Méneslies.",
+					"learnmore": "« Durant l’entre-deux guerres, l'ancien combattant représente une figure centrale. Dès 1917, Georges Clemenceau disait d'eux « ils ont des droits sur nous », manière de leur octroyer une reconnaissance symbolique. La Grande Guerre, dont on célèbre le Centenaire, a en effet marqué profondément et durablement, non seulement « la génération du feu » mais, à travers elle, la société toute entière. Tout d'abord, le phénomène ancien combattant prend une place toute particulière, ne serait-ce que par l'importance numérique du groupe : ils représentaient une part non négligeable de la population puisqu'ils sont environ 6,5 millions à avoir survécu à la guerre (en 1935, ils sont encore 5,5 millions, soit 42% de la population masculine totale). En France, le mouvement ancien combattant recrute jusqu'à 3 millions d'adhérents. Le mouvement ancien combattant fut d'abord un mouvement revendicatif et un syndicalisme des victimes de guerre. Ces hommes ont rapidement compris, au sortir de la Première Guerre mondiale voire même pendant le conflit, la nécessité de défendre leurs intérêts matériels). La plupart d'entre eux partageait une conviction commune basée sur l'expérience du front selon laquelle cette expérience était incompréhensible pour ceux qui ne l'avait pas vécue. A Méneslies, la banderole « unis comme au front »* fait allusion à cette expérience vécue à la fois de manière intime et individuelle mais aussi de manière éminemment collective. De par la proximité avec l'événement (captation réalisée 14 ans après la fin du conflit), ce slogan mobilisait aussi et encore l'héritage de l'union sacrée. Il fait aussi passer un autre message, plus subliminal : il a fallu combattre et travailler pour tenir dans la guerre, mais aussi croire (il est affiché devant l'église) ; cela montre aussi que la religion catholique reste un ciment des communautés rurales. » Julien Cahon, historien et enseignant-chercheur à l’UPJP",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Commémoration",
+							"filmmakers": "Anonyme",
+							"date": "1932",
+							"place": "Méneslies",
+							"Coloring": "Noir et blanc",
+							"Son": "Muet",
+							"Format": "17,5 mm",
+							"Durée": "1’00"
+						}
+					]
+				}
+			],
+			"latitude": 50.05841062278252,
+			"longitude": 1.5018954969242486
+		},
+		{
+			"name": "Nibas",
+			"videos": [
+				{
+					"description": "Des sorties et des voyages étaient organisés par l’abbé Leroy avec les enfants de chœur et les communiants des communes de Nibas, Saint Blimont et Vaudricourt.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Jeunes de la paroisse",
+							"filmmakers": "Abbé Noël Leroy",
+							"date": "1966",
+							"place": "Nibas",
+							"Coloring": "Couleur",
+							"Son": "Muet",
+							"Format": "16 mm",
+							"Durée": "0’25"
+						}
+					]
+				}
+			],
+			"latitude": 50.05841062278252,
+			"longitude": 1.5018954969242486
+		},
+		{
+			"name": "Aigneville",
+			"videos": [
+				{
+					"description": "La course cycliste organisée par le Véloce club du Vimeu attire de nombreux spectateurs ! Le ciné-club d’Escarbotin, avec Jacques Montier à la caméra, est sur place pour filmer cette actualité.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Course cycliste",
+							"filmmakers": "Jacques Montier",
+							"date": "1950-1952",
+							"place": "Friville-Escarbotin",
+							"Coloring": "Noir et blanc",
+							"Son": "Muet",
+							"Format": "16 mm",
+							"Durée": "0’53"
+						}
+					]
+				}
+			],
+			"latitude": 50.034994925743895,
+			"longitude": 1.61623902543829
+		},
+		{
+			"name": "Bourseville",
+			"videos": [
+				{
+					"description": "Redressement d’une cheminée à l’usine à gaz d’Escarbotin. Un métier dit « dangereux », où le spécialiste escalade la cheminée sans sécurité.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Usine à gaz",
+							"filmmakers": "Jacques Montier",
+							"date": "1950-1952",
+							"place": "Friville-Escarbotin",
+							"Coloring": "Noir et blanc",
+							"Son": "Muet",
+							"Format": "16 mm",
+							"Durée": "1’09"
+						}
+					]
+				}
+			],
+			"latitude": 50.105226567575514,
+			"longitude": 1.5240282852847713
+		},
+		{
+			"name": "Cahon-Gouy",
+			"videos": [
+				{
+					"description": "Les spectateurs de la course cycliste organisée par le Véloce club du Vimeu sont nombreux ! Certains n’hésitent pas à escalader les murs afin d’avoir un meilleur point de vue.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Quel spectacle !",
+							"filmmakers": "Jacques Montier",
+							"date": "1950-1952",
+							"place": "Friville-Escarbotin",
+							"Coloring": "Noir et blanc",
+							"Son": "Muet",
+							"Format": "16 mm",
+							"Durée": "1’09"
+						}
+					]
+				}
+			],
+			"latitude": 50.105226567575514,
+			"longitude": 1.5240282852847713
+		},
+		{
+			"name": "Friville-Escarbotin",
+			"videos": [
+				{
+					"description": "La fête foraine de Friville-Escarbotin se déroule le temps d’un week-end, toujours le deuxième dimanche de juin. Le lundi, il n’y a pas d’école. Le mardi soir a lieu une grande tombola avec des lots provenant des commerçants. On raconte qu’une queue et des oreilles de cochon étaient offertes par le boucher !",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Fête foraine",
+							"filmmakers": "Jacques Montier",
+							"date": "1950-1952",
+							"place": "Friville-Escarbotin",
+							"Coloring": "Noir et blanc",
+							"Son": "Muet",
+							"Format": "16 mm",
+							"Durée": "1’09"
+						}
+					]
+				}
+			],
+			"latitude": 50.105226567575514,
+			"longitude": 1.5240282852847713
+		},
+		{
+			"name": "Miannay",
+			"videos": [
+				{
+					"description": "Le corso fleuri de Friville-Escarbotin déploie ses chars décorés et colorés. De nombreux spectateurs assistent à la fête.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Corso fleuri",
+							"filmmakers": "Jacques Montier",
+							"date": "1963",
+							"place": "Friville-Escarbotin",
+							"Coloring": "Couleur",
+							"Son": "Muet",
+							"Format": "16 mm",
+							"Durée": "1’43"
+						}
+					]
+				}
+			],
+			"latitude": 50.09437191924683,
+			"longitude": 1.7188869877315938
+		},
+		{
+			"name": "Ochancourt",
+			"videos": [
+				{
+					"description": "En 1980, la direction et les enseignantes des écoles Jacques Prévert et Georges Sand constatent une baisse d'effectif grandissante et continue. Francis Isaac est alors responsable des parents d'élèves de l'école maternelle Jacques Prévert. Afin d'enrayer ce déclin, Francis Isaac propose de réaliser un film qui sera diffusé ensuite lors des portes ouvertes et des réunions pour valoriser les deux écoles. Nous assistons ici au cours de sport des enfants de l’école primaire Georges Sand.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Cours de sport",
+							"filmmakers": "Francis Isaac",
+							"date": "1980",
+							"place": "Friville-Escarbotin",
+							"Coloring": "Couleur",
+							"Son": "Sonore",
+							"Format": "Super 8",
+							"Durée": "1’06"
+						}
+					]
+				}
+			],
+			"latitude": 50.10299580617674,
+			"longitude": 1.6102115857229364
+		},
+		{
+			"name": "Tœufles",
+			"videos": [
+				{
+					"description": "L’Harmonie municipale de Friville Escarbotin, dirigée par Léandre Grognet, chef d’orchestre, anime la fête foraine en ce dimanche de juin.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Harmonie municipale",
+							"filmmakers": "Jacques Montier",
+							"date": "1950-1952",
+							"place": "Friville-Escarbotin",
+							"Coloring": "Noir et blanc",
+							"Son": "Muet",
+							"Format": "16 mm",
+							"Durée": "0’58"
+						}
+					]
+				},
+				{
+					"description": "Remise de médailles aux ouvriers des Ets Boutté-Buridard, entreprise de décolletage et fonderie. Max Lejeune assiste à la cérémonie. Mme Buridard remet les récompenses aux salariés.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Remise de médailles",
+							"filmmakers": "Jacques Montier",
+							"date": "1950-1952",
+							"place": "Friville-Escarbotin",
+							"Coloring": "Noir et blanc",
+							"Son": "Muet",
+							"Format": "16 mm",
+							"Durée": "1’16"
+						}
+					]
+				}
+			],
+			"latitude": 50.065995401505795,
+			"longitude": 1.714055588784845
+		},
+		{
+			"name": "Woincourt",
+			"videos": [
+				{
+					"description": "L’Harmonie municipale de Woincourt défile lors d’une fête communale. Les habitants suivent le cortège. « La mode de l’époque pour les hommes est au complet généralement assorti d’un chapeau melon, ou d’un chapeau mou. Chez les femmes, la mode est à la garçonne, dont Coco Chanel fut l’initiatrice. Les jupes sont plus courtes : depuis la fin des années 1920, elles s'arrêtent juste en dessous du genou. Les cheveux sont en général courts, coiffés sous un chapeau cloche. » Julien Cahon, historien et enseignant-chercheur.",
+					"learnmore": "Christian Broudot, collectionneur et passionné de cinéma, a trouvé ce film 17,5 mm dans lequel apparaissent de nombreuses séquences tournées en 1930 dans différentes communes du Vimeu.",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Fête communale",
+							"filmmakers": "Anonyme",
+							"date": "1930",
+							"place": "Woincourt",
+							"Coloring": "Noir et blanc",
+							"Son": "Muet",
+							"Format": "17,5 mm",
+							"Durée": "0’55"
+						}
+					]
+				}
+			],
+			"latitude": 50.066553110297335,
+			"longitude": 1.5377674251794815
+		},
+		{
+			"name": "Ercourt",
+			"videos": [
+				{
+					"description": "Cet autocar transporte les habitants du Vimeu à la plage d’Ault-Onival. La séquence est extraite de la fiction amateur picarde « Eune jornée à l’mer » réalisée par le cercle artistique d’Escarbotin.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Départ en autocar",
+							"filmmakers": [
+								"Gaëtan Arnoult",
+								"Serge Caron",
+								"Jacques Montier",
+								"Pierre Ricouard",
+								"Pierre Rigaux"
+							],
+							"date": "1950",
+							"place": "Friville-Escarbotin",
+							"Coloring": "Noir et blanc",
+							"Son": "Sonore",
+							"Format": "16 mm",
+							"Durée": "1’51"
+						}
+					]
+				}
+			],
+			"latitude": 50.04160511159238,
+			"longitude": 1.7225469582490405
+		},
+		{
+			"name": "Feuquières-en-Vimeu",
+			"videos": [
+				{
+					"description": "L’usine Dimpre fut créée en 1912 par M. Charles Dimpre et se situait au 55 rue du Général Leclerc à Friville-Escarbotin. L'entreprise Dimpre forte de son savoir-faire dans le domaine de la robinetterie, concurrentielle des allemands Grohe, fut une entreprise modèle du Vimeu industriel, jusqu'à ce qu'elle soit revendue peu après 1967. Ce film a été réalisé cette même année, à la demande d’Henri Dimpre, directeur et fils de Charles Dimpre, peu avant son départ en retraite. Nous assistons ici à la sortie des salariés de l’usine.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "Sortie de l’Usine Dimpre",
+							"filmmakers": "Claude Périllat",
+							"date": "1967",
+							"place": "Friville-Escarbotin",
+							"Coloring": "Noir et blanc",
+							"Son": "Sonore",
+							"Format": "16 mm",
+							"Durée": "0’21"
+						}
+					]
+				}
+			],
+			"latitude": 50.060960798025484,
+			"longitude": 1.6083185527567139
+		},
+		{
+			"name": "Grébault-Mesnil",
+			"videos": [
+				{
+					"description": "La fête sportive organisée par l'Union Sportive des Écoles Primaires (USEP) du Vimeu clôture l'année scolaire. Plusieurs écoles se rassemblent et défilent sur le stade de Friville-Escarbotin.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "La fête sportive",
+							"filmmakers": "Francis Isaac",
+							"date": "1980",
+							"place": "Friville-Escarbotin",
+							"Coloring": "Couleur",
+							"Son": "Sonore",
+							"Format": "Super 8",
+							"Durée": "0’58"
+						}
+					]
+				}
+			],
+			"latitude": 50.024677556657615,
+			"longitude": 1.7196733557849484
+		},
+		{
+			"name": "Huchenneville",
+			"videos": [
+				{
+					"description": "La fête sportive organisée par l'Union Sportive des Écoles Primaires (USEP) du Vimeu clôture l'année scolaire. Plusieurs écoles se rassemblent et défilent sur le stade de Friville-Escarbotin.",
+					"learnmore": "",
+					"url": "",
+					"images": [
+						{
+							"url": ""
+						}
+					],
+					"details": [
+						{
+							"title": "La fête sportive",
+							"filmmakers": "Francis Isaac",
+							"date": "1980",
+							"place": "Friville-Escarbotin",
+							"Coloring": "Couleur",
+							"Son": "Sonore",
+							"Format": "Super 8",
+							"Durée": "1’00"
+						}
+					]
+				}
+			],
+			"latitude": 50.05084276720565,
+			"longitude": 1.7993945239425102
+		}
+	]
+}

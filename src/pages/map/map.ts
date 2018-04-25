@@ -1,86 +1,98 @@
 import { Component } from '@angular/core';
-import { ToastController } from 'ionic-angular';
-import { GoogleMaps, GoogleMap, GoogleMapsEvent, Marker, GoogleMapsAnimation, MyLocation } from '@ionic-native/google-maps';
+import { GoogleMaps, GoogleMap, GoogleMapsEvent, GoogleMapOptions } from '@ionic-native/google-maps';
+import { Platform } from 'ionic-angular';
+import { MapStyle } from './map-style';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+
 
 @Component({
   selector: 'page-map',
   templateUrl: 'map.html'
 })
+
 export class MapPage {
   mapReady: boolean = false;
   map: GoogleMap;
+  artworkList: any;
+  artworkBounds = [];
 
-  constructor(public toastCtrl: ToastController) {
+  constructor(public platform: Platform, private http:Http) {
+    this.http.get('assets/data/artwork.json')
+    .map(res => res.json())
+    .subscribe(data => {
+        this.artworkList = data.artworks;
+      },
+      err => console.log("Erreur suivante lors de la récupération des frises :  "+err), // error
+      () => console.log('Les frises ont été récupérées') // complete
+    );
   }
 
-  ionViewDidLoad() {
-    this.loadMap();
+  ngAfterViewInit() {
+    this.platform.ready().then(() => {
+      this.loadMap();
+    });
   }
 
   loadMap() {
-    // Create a map after the view is loaded.
-    // (platform is already ready in app.component.ts)
-    this.map = GoogleMaps.create('map_canvas', {
+
+   let mapOptions: GoogleMapOptions = {
+      styles: MapStyle,
       camera: {
         target: {
-          lat: 43.0741704,
-          lng: -89.3809802
+          lat: 50.05760230576669,
+          lng: 1.6356562847967098
         },
-        zoom: 18,
-        tilt: 30
+        zoom: 5,
+        tilt: 0,
+        bearing: 0,
       }
-    });
+    };
 
-    // Wait the maps plugin is ready until the MAP_READY event
-    this.map.one(GoogleMapsEvent.MAP_READY).then(() => {
-      this.mapReady = true;
-    });
-  }
+   this.map = GoogleMaps.create('map_canvas', mapOptions);
 
-  onButtonClick() {
-    if (!this.mapReady) {
-      this.showToast('La carte ne s\'est pas chargée correctement.');
-      return;
-    }
-    this.map.clear();
+   // Wait the MAP_READY before using any methods.
+   this.map.one(GoogleMapsEvent.MAP_READY)
+     .then(() => {
+        console.log('La carte est opérationelle');
 
-    // Get the location of you
-    this.map.getMyLocation()
-      .then((location: MyLocation) => {
-        console.log(JSON.stringify(location, null ,2));
+        // var bounds = this.map..LatLngBounds();
 
-        // Move the map camera to the location with animation
-        return this.map.animateCamera({
-          target: location.latLng,
-          zoom: 17,
-          tilt: 30
-        }).then(() => {
-          // add a marker
-          return this.map.addMarker({
-            title: '@ionic-native/google-maps plugin!',
-            snippet: 'This plugin is awesome!',
-            position: location.latLng,
-            animation: GoogleMapsAnimation.BOUNCE
-          });
-        })
-      }).then((marker: Marker) => {
-        // show the infoWindow
-        marker.showInfoWindow();
+        for (let _i = 0; _i < this.artworkList.length; _i++) {
 
-        // If clicked it, display the alert
-        marker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-          this.showToast('clicked!');
+          // Incrémentation du tableau des bornes
+          this.artworkBounds.push({lat: this.artworkList[_i].latitude, lng: this.artworkList[_i].longitude});
+
+          // Ajout des marqueurs
+          this.map.addMarker({
+            icon: {
+              url: "assets/imgs/marker.png",
+              size: {
+                  width: 20,
+                  height: 35
+                }
+            },
+            disableAutoPan: true,
+            position: {
+              lat: this.artworkList[_i].latitude,
+              lng: this.artworkList[_i].longitude
+            }
+          })
+          .then(marker => {
+              marker.on(GoogleMapsEvent.MARKER_CLICK)
+                .subscribe(() => {
+                  alert(this.artworkList[_i].name);
+                });
+            });
+        }
+
+        this.map.animateCamera({
+          target: this.artworkBounds,
+          duration: 3000
         });
-      });
+          
+     });
+
   }
 
-  showToast(message: string) {
-    let toast = this.toastCtrl.create({
-      message: message,
-      duration: 2000,
-      position: 'middle'
-    });
-
-    toast.present(toast);
-  }
 }

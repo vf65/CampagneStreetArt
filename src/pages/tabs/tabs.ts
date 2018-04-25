@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { ProximPage } from '../proxim/proxim';
+import { NearmePage } from '../nearme/nearme';
 import { AboutPage } from '../about/about';
 import { MapPage } from '../map/map';
 
@@ -10,7 +10,7 @@ import { MapPage } from '../map/map';
 export class TabsPage {
 
   tab1Root = MapPage;
-  tab2Root = ProximPage;
+  tab2Root = NearmePage;
   tab3Root = AboutPage;
 
   constructor() {
