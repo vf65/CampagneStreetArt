@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="co.sitis.campagnestreetart" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="co.sitis.campagnestreetart" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>CampagneStreetArt</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
@@ -82,20 +82,20 @@
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
     <plugin name="cordova-plugin-statusbar" spec="^2.4.1" />
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
-    <allow-navigation href="http://192.168.1.89:8100" />
-    <engine name="ios" />
     <plugin name="cordova-plugin-googlemaps" spec="^2.2.9">
         <variable name="API_KEY_FOR_ANDROID" value="AIzaSyAUR5AjLYRoypkpi_6cfv62Qa9mkJqS5LE" />
         <variable name="API_KEY_FOR_IOS" value="AIzaSyBxHtzta8h5p4Y7cK6o-uUKTBK_h8gNM08" />
         <variable name="PLAY_SERVICES_VERSION" value="12.0.0" />
         <variable name="ANDROID_SUPPORT_V4_VERSION" value="24.1.0" />
     </plugin>
-    <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
-    <plugin name="cordova-plugin-geolocation" spec="^4.0.1">
-        <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="To locate you" />
+    <plugin name="cordova-plugin-geolocation" spec="https://github.com/apache/cordova-plugin-geolocation.git">
+        <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="Pour vous localiser" />
     </plugin>
-    <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
-        <string>Need location access to find things nearby</string>
-    </edit-config>
+    <allow-navigation href="http://192.168.1.89:8100" />
+    <engine name="ios" />
     <engine name="browser" spec="5.0.3" />
+    <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
+        <string>Nous avons besoin de connaitre votre position pour afficher les fresques autour de vous</string>
+    </edit-config>
+    <engine name="android" spec="~7.0.0" />
 </widget>

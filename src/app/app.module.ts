@@ -12,7 +12,7 @@ import { MapPage } from '../pages/map/map';
 import { InfoPage } from '../pages/info/info';
 import { TabsPage } from '../pages/tabs/tabs';
 import { Geolocation } from '@ionic-native/geolocation';
-
+import { Diagnostic } from '@ionic-native/diagnostic';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,13 @@ import { Geolocation } from '@ionic-native/geolocation';
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      platforms: {
+        ios: {
+            backButtonText: 'Retour'
+        }
+      }
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -42,6 +48,7 @@ import { Geolocation } from '@ionic-native/geolocation';
     SplashScreen,
     GoogleMaps,
     Geolocation,
+    Diagnostic,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

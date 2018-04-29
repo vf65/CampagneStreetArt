@@ -113,6 +113,106 @@ ion-content.content{
     background-color: #000;
 }
 
+
+ion-content .section.content{
+    background-color: #fff;
+    -webkit-box-shadow: inset 0px 0px 0px 2px black;
+    box-shadow: inset 0px 0px 0px 2px black;
+    border: 4px solid #ffffff;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
+}
+
+ion-content .section h3.title{
+    font-weight: bold;
+}
+
+ion-content .section{
+    padding: 15px;
+    margin: 15px;
+}
+
+ion-content .wrap{
+    max-width: 500px;
+    position: relative;
+    margin: 0 auto;
+}
+
+ion-content .spacer-30p{
+    height:30%;
+    position:relative;
+}
+
+ion-content .poster{
+    position:fixed;
+    width: 100%;
+}
+
+ion-content .itinerary{
+    width:150px;
+    max-width:100%;
+}
+
+ion-content content { 
+    width:100%;
+    max-width:500px;
+    height:auto;
+    margin:0 auto;
+ }
+
+ion-content ul{
+    padding-left: 0;
+}
+
+ion-content li{
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+ion-content li ion-icon{
+    width: 1.2em;
+    text-align: center;
+}
+
+.toolbar-background {
+    border-color: #000000;
+    background: #000000;
+}
+
+.toolbar-title,
+.back-button {
+    color: #ffffff;
+    font-weight:bold;
+}
+
 .tabs-ios .tabbar{
     border-top:none;
 }
+
+.back-button-text-ios{
+    font-size: 12px;
+}
+
+.toolbar {
+    padding: 4px;
+    min-height: 56px;
+}
+
+.tabs-md .tab-button-icon {
+    min-width: 3rem;
+    font-size: 3rem;
+}
+
+video { 
+   width:100%;
+   max-width:500px;
+   height:auto;
+   display:block;
+}
+
+.tabs-ios .tabbar{
+    background: #000000;
+}
+
+
+
