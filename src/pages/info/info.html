@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-            {{infoArtwork.name}} {{infoArtwork.name}}
+        {{infoArtwork.name}}
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -12,22 +12,23 @@
 
   <ng-container *ngIf="infoArtwork.distance < 0.1;then video"></ng-container>
   <ng-container *ngIf="infoArtwork.distance >= 0.1;then warning"></ng-container>
-  <ng-container *ngIf="!infoArtwork.distance;then error"></ng-container>
-  <ng-container *ngIf="infoArtwork.distance === 'NaN';then error"></ng-container>
+  <ng-container *ngIf="!infoArtwork.distance;then loading"></ng-container>
+  <ng-container *ngIf="infoArtwork.distance === 'NaN';then loading"></ng-container>
 
-  <ng-template #error>
-
-        <div class="wrap">
-            <div class="section content" text-center>
+  <ng-template #loading>
   
-                <img src="assets/imgs/warning.jpg" alt="!" class="itinerary" padding-top />
+          <div class="wrap">
+              <div class="section content" text-center>
+    
+                  <ion-spinner name="ios" padding-top ></ion-spinner>
+    
+                  <h3 class="title">Nous recherchons votre position</h3>
+                  <p padding-bottom>Merci de patienter quelques secondes...</p>
   
-                <h3 class="title">Oups! Nous n'avons pas réussi à vous localiser</h3>
-                <p padding-bottom>Pour vous guider, nous avons besoin de connaitre votre position. Pour cela vérifiez que la localisation de votre appareil est activée et acceptez la demande de position lors de la première ouverture de l'app. Si vous rencontrez un problème, désinstallez et réinstallez l'app à nouveau.</p>
-
-            </div>
-        </div>
-  
+    
+              </div>
+          </div>
+    
   </ng-template>
   
   <ng-template #warning>
@@ -40,7 +41,7 @@
               <h3 class="title">Encore un peu de chemin à parcourir...</h3>
               <p padding-bottom>Pour en savoir plus sur cette fresque, rapprochez-vous à moins de 100 mètres et revenez sur cette page. Le contenu s'affichera automatiquement.</p>
         
-              <button (click)="callItinerary(infoArtwork.latitude, infoArtwork.longitude)" ion-button full color="tertiary" icon-left large margin-bottom>
+              <button (click)="callItinerary(infoArtwork.latitude, infoArtwork.longitude, infoArtwork.name)" ion-button full color="tertiary" icon-left large margin-bottom>
                 <ion-icon name="md-navigate"></ion-icon>
                 Itinéraire
               </button>

@@ -1,16 +1,16 @@
 <ion-content>
 
-<ng-container *ngIf="userLat;then locations else error"></ng-container>
+<ng-container *ngIf="userLat;then locations else loading"></ng-container>
 
-<ng-template #error>
+<ng-template #loading>
 
         <div class="wrap">
             <div class="section content" text-center>
   
-                <img src="assets/imgs/warning.jpg" alt="!" class="itinerary" padding-top />
+                <ion-spinner name="ios" ></ion-spinner>
   
-                <h3 class="title">Oups! Nous n'avons pas réussi à vous localiser</h3>
-                <p padding-bottom>Pour vous guider, nous avons besoin de connaitre votre position. Pour cela vérifiez que la localisation de votre appareil est activée et acceptez la demande de position lors de la première ouverture de l'app. Si vous rencontrez un problème, désinstallez et réinstallez l'app à nouveau.</p>
+                <h3 class="title">Nous recherchons votre position</h3>
+                <p padding-bottom>Merci de patienter quelques secondes...</p>
 
             </div>
         </div>

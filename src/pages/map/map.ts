@@ -14,20 +14,20 @@
   })
   
   export class MapPage {
-    mapReady: boolean = false;
     map: GoogleMap;
     artworkList: any;
     artworkBounds = [];
     userLat: number;
     userLng: number;
-    initialMapLoad: boolean = true;
+
     constructor(public navCtrl: NavController, public diagnostic: Diagnostic, public platform: Platform, public http: Http, public geolocation: Geolocation) {
     }
 
     ngAfterViewInit() {
         this.platform.ready().then(() => {
+            this.loadUserPosition();
+            this.loadArtworks();
             this.loadMap();
-            this.loadUserPositions("map");
         });
     }
   
@@ -82,7 +82,7 @@
                         .then(marker => {
                             marker.on(GoogleMapsEvent.MARKER_CLICK)
                                 .subscribe(() => {
-                                    // alert(this.artworkList[_i]);
+                                    // alert('on click marker : ' + this.artworkList[_i]);
                                     this.showInfo(this.artworkList[_i]);
                                 });
                         });
@@ -97,7 +97,7 @@
   
     }
 
-    loadUserPositions(type) {
+    loadUserPosition() {
         this.checkGPS();
         let geoOptions = {
             timeout: 10000,
@@ -121,14 +121,14 @@
                 // alert('userLat : ' + this.userLat);
                 // alert('userLng : ' + this.userLng);
             }
-            this.loadPositions(type);
+            this.loadArtworks();
         });
-    }4
+    }
 
 
 
 
-    loadPositions(type) {
+    loadArtworks() {
         // alert('loadPositions exécuté');
 
         return new Promise(resolve => {
@@ -136,14 +136,12 @@
             this.http.get('assets/data/artwork.json')
                 .map(res => res.json())
                 .subscribe(data => {
-                        if(type == "map"){
-                            this.artworkList = data.artworks;
-                        }else{
-                            this.artworkList = this.applyHaversine(data.artworks);
-                            this.artworkList.sort((locationA, locationB) => {
-                                return locationA.distance - locationB.distance;
-                            });
-                        }
+                        
+                        this.artworkList = this.applyHaversine(data.artworks);
+                        // this.artworkList.sort((locationA, locationB) => {
+                        //     return locationA.distance - locationB.distance;
+                        // });
+                        // alert('this.artworkList' + this.artworkList);
                         resolve(this.artworkList);
                     },
                     err => {
@@ -158,6 +156,7 @@
         });
 
     }
+
 
     checkGPS() {
         this.diagnostic.isLocationEnabled().then(
