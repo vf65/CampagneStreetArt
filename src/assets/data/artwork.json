@@ -330,8 +330,8 @@
                 "format": "16 mm",
                 "duration": "1’09"
             }],
-            "latitude": 50.12028511142742,
-            "longitude": 1.7233202190146812
+            "latitude": 50.11933442181534,
+            "longitude": 1.7222211789662651
         },
         {
             "id": 17,
@@ -532,46 +532,6 @@
             }],
             "latitude": 50.05084276720565,
             "longitude": 1.7993945239425102
-        },
-        {
-            "id": 26,
-            "name": "Paris 20",
-            "poster": "assets/imgs/artworks/paris20.jpg",
-            "videos": [{
-                "title": "Sitis",
-                "description": "Agence de communication",
-                "learnmore": "",
-                "url": "https://s1.sitis.co/archipop/campagne-streetart/extraits-videos/fete-du-sport-2.mp4",
-                "filmmakers": "Victor Faury",
-                "date": "1982",
-                "place": "Paris 20",
-                "coloring": "Couleur",
-                "sound": "sonore",
-                "format": "Super 8",
-                "duration": "1’00"
-            }],
-            "latitude": 48.857271,
-            "longitude": 2.403250
-        },
-        {
-            "id": 27,
-            "name": "Hôtel de la Poste",
-            "poster": "assets/imgs/artworks/hotel-poste.jpg",
-            "videos": [{
-                "title": "Test GPS",
-                "description": "ceci est un test",
-                "learnmore": "",
-                "url": "https://s1.sitis.co/archipop/campagne-streetart/extraits-videos/fete-du-sport-2.mp4",
-                "filmmakers": "Test",
-                "date": "Test",
-                "place": "Test",
-                "coloring": "Test",
-                "sound": "Test",
-                "format": "Test",
-                "duration": "1’00"
-            }],
-            "latitude": 49.432385,
-            "longitude": 2.084120
         }
     ]
 }
