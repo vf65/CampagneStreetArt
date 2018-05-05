@@ -8,7 +8,6 @@
 
 <ion-content>
   <img src="{{infoArtwork.poster}}" alt="{{infoArtwork.name}}" class="poster" />
-  <div class="spacer-30p"></div>
 
   <ng-container *ngIf="infoArtwork.distance < 0.1;then video"></ng-container>
   <ng-container *ngIf="infoArtwork.distance >= 0.1;then warning"></ng-container>
@@ -17,19 +16,22 @@
 
   <ng-template #loading>
   
-          <div class="wrap">
-              <div class="section content" text-center>
+        <div class="wrap">
+                <div class="section content" text-center>
     
-                  <ion-spinner name="ios" padding-top ></ion-spinner>
+                    <img src="assets/imgs/logox500.png" style="width: 60%;" padding-top>
+                    <br>
+                    <ion-spinner name="ios"  padding-top></ion-spinner>
+      
+                    <h3 style="margin-top:0" class="title">Nous recherchons votre position</h3>
+                    <p padding-bottom>Merci de patienter quelques secondes...</p>
     
-                  <h3 class="title">Nous recherchons votre position</h3>
-                  <p padding-bottom>Merci de patienter quelques secondes...</p>
-  
-    
-              </div>
-          </div>
-    
+                </div>
+        </div>
+        
   </ng-template>
+
+  <div class="spacer-30p"></div>
   
   <ng-template #warning>
 

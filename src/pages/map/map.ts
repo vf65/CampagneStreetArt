@@ -21,16 +21,68 @@
     userLng: number;
 
     constructor(public navCtrl: NavController, public diagnostic: Diagnostic, public platform: Platform, public http: Http, public geolocation: Geolocation) {
+        
+        platform.ready().then(() => {
+            geolocation.watchPosition().subscribe(pos => {
+                console.log('lat: ' + pos.coords.latitude + ', lon: ' + pos.coords.longitude);
+                if (pos.coords !== undefined) {
+                this.userLat = pos.coords.latitude;
+                this.userLng = pos.coords.longitude;
+                this.loadDistance();
+                }
+    
+            });
+        });
+
     }
 
     ngAfterViewInit() {
         this.platform.ready().then(() => {
-            this.loadUserPosition();
+            // this.loadUserPosition();
             this.loadArtworks();
             this.loadMap();
+            this.checkGPS();
         });
     }
   
+
+    loadDistance() {
+
+        return new Promise(resolve => {
+    
+            this.artworkList = this.applyHaversine(this.artworkList);
+            resolve(this.artworkList);
+    
+        });
+    
+    }
+    
+
+    loadArtworks() {
+        // alert('loadPositions exécuté');
+
+        return new Promise(resolve => {
+
+            this.http.get('assets/data/artwork.json')
+                .map(res => res.json())
+                .subscribe(data => {
+                        
+                        this.artworkList = data.artworks;
+                        resolve(this.artworkList);
+                    },
+                    err => {
+                        console.log("Erreur suivante lors de la récupération des fresques :  " + err); // error
+                    },
+                    () => {
+                        console.log('Les fresques ont été récupérées'); // complete
+                        console.log(this.artworkList);
+                    }
+                );
+
+        });
+
+    }
+
     loadMap() {
   
         let mapOptions: GoogleMapOptions = {
@@ -95,58 +147,6 @@
   
     }
 
-    loadUserPosition() {
-        this.checkGPS();
-        let geoOptions = {
-            timeout: 10000,
-            enableHighAccuracy: false
-        };
-        this.geolocation.getCurrentPosition(geoOptions).then((data) => {
-            this.userLat = data.coords.latitude;
-            this.userLng = data.coords.longitude;
-        }).catch((error) => {
-            console.log('La géolocalisation a été refusée', error.message);
-        });
-
-        let watch = this.geolocation.watchPosition(geoOptions);
-        watch.subscribe((data) => {
-            if (data.coords !== undefined) {
-                this.userLat = data.coords.latitude;
-                this.userLng = data.coords.longitude;
-                // console.log('userLat : ' + this.userLat);
-                // console.log('userLng : ' + this.userLng);
-            }
-            this.loadArtworks();
-        });
-    }
-
-
-
-
-    loadArtworks() {
-        // alert('loadPositions exécuté');
-
-        return new Promise(resolve => {
-
-            this.http.get('assets/data/artwork.json')
-                .map(res => res.json())
-                .subscribe(data => {
-                        
-                        this.artworkList = this.applyHaversine(data.artworks);
-                        resolve(this.artworkList);
-                    },
-                    err => {
-                        console.log("Erreur suivante lors de la récupération des fresques :  " + err); // error
-                    },
-                    () => {
-                        console.log('Les fresques ont été récupérées'); // complete
-                        console.log(this.artworkList);
-                    }
-                );
-
-        });
-
-    }
 
 
     checkGPS() {
@@ -158,15 +158,6 @@
             });
     }
 
-    sortByProperty(property) {
-
-        return function(x, y) {
-
-            return ((x[property] === y[property]) ? 0 : ((x[property] > y[property]) ? 1 : -1));
-
-        };
-
-    };
 
     applyHaversine(locations) {
 
@@ -223,6 +214,7 @@
     }
   
     showInfo(artwork) {
+        // alert('map: ' + JSON.stringify(artwork));
         this.navCtrl.push(InfoPage, {
             artwork: artwork 
         });

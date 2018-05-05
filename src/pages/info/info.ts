@@ -16,18 +16,35 @@ export class InfoPage {
   userLat: number;
   userLng: number;
 
-
   constructor(public navCtrl: NavController, public diagnostic: Diagnostic, public navParams: NavParams, public http: Http, public platform: Platform, public geolocation: Geolocation) {
 
     this.infoArtwork = navParams.get('artwork');
     console.log('this.infoArtwork = ' + JSON.stringify(this.infoArtwork));
-  }
+    
+    platform.ready().then(() => {
+        geolocation.watchPosition().subscribe(pos => {
+            console.log('lat: ' + pos.coords.latitude + ', lon: ' + pos.coords.longitude);
+            if (pos.coords !== undefined) {
+            this.userLat = pos.coords.latitude;
+            this.userLng = pos.coords.longitude;
+            this.loadDistance();
+            }
+
+        });
+    });
+
+}
+
+
+
+  
 
   ngAfterViewInit() {
     this.platform.ready().then(() => {
-        this.loadUserPosition();
+        this.checkGPS();
     });
-}
+  }
+
 
   callItinerary(lat, lng, name) {
     var uri;  
@@ -42,30 +59,6 @@ export class InfoPage {
     window.open(uri, '_system');  
   }
 
-  loadUserPosition() {
-    this.checkGPS();
-    let geoOptions = {
-        timeout: 10000,
-        enableHighAccuracy: false
-    };
-    this.geolocation.getCurrentPosition(geoOptions).then((data) => {
-        this.userLat = data.coords.latitude;
-        this.userLng = data.coords.longitude;
-    }).catch((error) => {
-        console.log('La géolocalisation a été refusée', error.message);
-    });
-
-    let watch = this.geolocation.watchPosition(geoOptions);
-    watch.subscribe((data) => {
-        if (data.coords !== undefined) {
-            this.userLat = data.coords.latitude;
-            this.userLng = data.coords.longitude;
-            console.log('userLat : ' + this.userLat);
-            console.log('userLng : ' + this.userLng);
-        }
-        this.loadDistance();
-    });
-}
 
 loadDistance() {
 

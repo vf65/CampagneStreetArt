@@ -17,48 +17,27 @@ export class NearmePage {
     artworkList: any;
     userLat: number;
     userLng: number;
-    requestEnableLocation: any;
 
     constructor(public navCtrl: NavController, public diagnostic: Diagnostic, public platform: Platform, public http: Http, public geolocation: Geolocation) {
-
+    
+        platform.ready().then(() => {
+            geolocation.watchPosition().subscribe(pos => {
+                console.log('lat: ' + pos.coords.latitude + ', lon: ' + pos.coords.longitude);
+                if (pos.coords !== undefined) {
+                this.userLat = pos.coords.latitude;
+                this.userLng = pos.coords.longitude;
+                this.loadArtworks();
+                }
+    
+            });
+        });
     }
 
     ngAfterViewInit() {
         this.platform.ready().then(() => {
-            this.loadUserPosition();
+            this.checkGPS();
         });
     }
-
-    loadUserPosition() {
-        this.checkGPS();
-        let geoOptions = {
-            enableHighAccuracy: false
-        };
-
-        this.geolocation.getCurrentPosition(geoOptions).then((data) => {
-            this.userLat = data.coords.latitude;
-            this.userLng = data.coords.longitude;
-        }).catch((error) => {
-            console.log('La géolocalisation a été refusée', error.message);
-            // alert('La géolocalisation a été refusée : ' + error.message);
-        });
-
-        let watch = this.geolocation.watchPosition(geoOptions);
-        watch.subscribe((data) => {
-            if (data.coords !== undefined) {
-                this.userLat = data.coords.latitude;
-                this.userLng = data.coords.longitude;
-                console.log('userLat : ' + this.userLat);
-                console.log('userLng : ' + this.userLng);
-                // alert('userLat : ' + this.userLat);
-                // alert('userLng : ' + this.userLng);
-            }
-            this.loadArtworks();
-        });
-    }
-
-
-
 
     loadArtworks() {
         // alert('loadPositions exécuté');
@@ -99,15 +78,6 @@ export class NearmePage {
             });
     }
 
-    sortByProperty(property) {
-
-        return function(x, y) {
-
-            return ((x[property] === y[property]) ? 0 : ((x[property] > y[property]) ? 1 : -1));
-
-        };
-
-    };
 
     applyHaversine(locations) {
 
@@ -164,6 +134,7 @@ export class NearmePage {
     }
   
     showInfo(artwork) {
+        // alert('nearme: ' + JSON.stringify(artwork));
         this.navCtrl.push(InfoPage, {
             artwork: artwork 
         });
