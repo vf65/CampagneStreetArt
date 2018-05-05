@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="co.sitis.campagnestreetart" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Campagne Street Art</name>
+    <name>CampagneStreetArt</name>
     <description>Quand les archives cinématographiques s'affichent</description>
     <author email="victor@sitis.co" href="https://www.sitis.co">Victor Faury (Sitis)</author>
     <content src="index.html" />
