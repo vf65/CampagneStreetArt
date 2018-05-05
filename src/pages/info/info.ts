@@ -21,8 +21,6 @@ export class InfoPage {
 
     this.infoArtwork = navParams.get('artwork');
     console.log('this.infoArtwork = ' + JSON.stringify(this.infoArtwork));
-    // alert('this.infoArtwork = ' + JSON.stringify(this.infoArtwork));
-
   }
 
   ngAfterViewInit() {
@@ -55,7 +53,6 @@ export class InfoPage {
         this.userLng = data.coords.longitude;
     }).catch((error) => {
         console.log('La géolocalisation a été refusée', error.message);
-        // alert('La géolocalisation a été refusée : ' + error.message);
     });
 
     let watch = this.geolocation.watchPosition(geoOptions);
@@ -65,20 +62,16 @@ export class InfoPage {
             this.userLng = data.coords.longitude;
             console.log('userLat : ' + this.userLat);
             console.log('userLng : ' + this.userLng);
-            // alert('userLat : ' + this.userLat);
-            // alert('userLng : ' + this.userLng);
         }
         this.loadDistance();
     });
 }
 
 loadDistance() {
-    // alert('loadPositions exécuté');
 
     return new Promise(resolve => {
 
         this.infoArtwork = this.applyHaversine(this.infoArtwork);
-        // alert('this.infoArtwork update distance' + JSON.stringify(this.infoArtwork));
         resolve(this.infoArtwork);
 
     });
@@ -86,9 +79,6 @@ loadDistance() {
 }
 
 applyHaversine(location) {
-
-    // alert('ça passe 1 = ' + JSON.stringify(location));
-
 
     let usersLocation = {
         lat: this.userLat,
@@ -106,8 +96,6 @@ applyHaversine(location) {
         placeLocation,
         'km'
     ).toFixed(2);
-
-    // alert('ça passe 2 = ' + JSON.stringify(location));
 
     return location;
 }

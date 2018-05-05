@@ -53,9 +53,7 @@
             .then(() => {
                 console.log('La carte est opérationelle');
                 // alert('La carte est opérationelle');
-  
-                // var bounds = this.map..LatLngBounds();
-  
+    
                 for (let _i = 0; _i < this.artworkList.length; _i++) {
   
                     // Incrémentation du tableau des bornes
@@ -108,7 +106,6 @@
             this.userLng = data.coords.longitude;
         }).catch((error) => {
             console.log('La géolocalisation a été refusée', error.message);
-            // alert('La géolocalisation a été refusée : ' + error.message);
         });
 
         let watch = this.geolocation.watchPosition(geoOptions);
@@ -116,10 +113,8 @@
             if (data.coords !== undefined) {
                 this.userLat = data.coords.latitude;
                 this.userLng = data.coords.longitude;
-                console.log('userLat : ' + this.userLat);
-                console.log('userLng : ' + this.userLng);
-                // alert('userLat : ' + this.userLat);
-                // alert('userLng : ' + this.userLng);
+                // console.log('userLat : ' + this.userLat);
+                // console.log('userLng : ' + this.userLng);
             }
             this.loadArtworks();
         });
@@ -138,10 +133,6 @@
                 .subscribe(data => {
                         
                         this.artworkList = this.applyHaversine(data.artworks);
-                        // this.artworkList.sort((locationA, locationB) => {
-                        //     return locationA.distance - locationB.distance;
-                        // });
-                        // alert('this.artworkList' + this.artworkList);
                         resolve(this.artworkList);
                     },
                     err => {
