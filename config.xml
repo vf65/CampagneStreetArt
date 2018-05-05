@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="co.sitis.campagnestreetart" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="co.sitis.campagnestreetart" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>CampagneStreetArt</name>
-    <description>An awesome Ionic/Cordova app.</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <description>Quand les archives cinématographiques s'affichent</description>
+    <author email="victor@sitis.co" href="https://www.sitis.co">Victor Faury (Sitis)</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -10,12 +10,11 @@
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="maps:*" />
     <access launch-external="yes" origin="tel:*" />
     <access launch-external="yes" origin="geo:*" />
     <access launch-external="yes" origin="maps:*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="geo:*" />
-    <allow-intent href="maps:*" />
     <preference name="ScrollEnabled" value="false" />
     <preference name="android-minSdkVersion" value="19" />
     <preference name="BackupWebStorage" value="none" />
@@ -110,5 +109,5 @@
     </edit-config>
     <engine name="browser" spec="5.0.3" />
     <engine name="android" spec="7.0.0" />
-    <engine name="ios" spec="~4.5.4" />
+    <engine name="ios" spec="4.5.4" />
 </widget>
