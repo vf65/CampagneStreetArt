@@ -102,7 +102,7 @@
     <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
         <string>Nous avons besoin de connaitre votre position pour afficher les fresques autour de vous</string>
     </edit-config>
-    <engine name="ios" spec="^4.5.4" />
     <engine name="browser" spec="5.0.3" />
     <engine name="android" spec="7.0.0" />
+    <engine name="ios" spec="~4.5.4" />
 </widget>

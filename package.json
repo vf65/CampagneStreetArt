@@ -33,7 +33,7 @@
     "browse": "0.4.0",
     "cordova-android": "7.0.0",
     "cordova-browser": "5.0.3",
-    "cordova-ios": "^4.5.4",
+    "cordova-ios": "4.5.4",
     "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-device": "^2.0.1",
     "cordova-plugin-geolocation": "git+https://github.com/apache/cordova-plugin-geolocation.git",
@@ -76,9 +76,9 @@
       "cordova.plugins.diagnostic": {}
     },
     "platforms": [
-      "ios",
       "browser",
-      "android"
+      "android",
+      "ios"
     ]
   }
 }
