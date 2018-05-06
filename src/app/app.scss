@@ -162,12 +162,16 @@ ion-content content {
 
 ion-content ul{
     padding-left: 0;
+    margin:0
 }
 
 ion-content li{
     list-style: none;
     margin-bottom: 5px;
-    width: 48%;
+}
+
+ion-content .two-columns li{
+    width: 32%;
     display: inline-block;
 }
 
@@ -176,20 +180,12 @@ ion-content li ion-icon{
     text-align: center;
 }
 
-ion-content ion-spinner * {
-    stroke: #000;
-    fill: #000;
-  }
-
-  ion-content ion-spinner {
-    margin: 20px;
-    width: 48px;
-    height: 48px;
-
-  }
+ion-content ion-card-content{
+    padding: 20px 25px!important;
+}
   
 
-.toolbar-background {
+ion-header .toolbar-background {
     border-color: #000000;
     background: #000000;
 }
@@ -227,6 +223,50 @@ video {
 
 .tabs-ios .tabbar{
     background: #000000;
+}
+
+.swiper-pagination-bullet-active,
+.swiper-pagination-bullet {
+    background: #8a621e;
+}
+
+.button-md{
+    text-transform: none!important;
+}
+
+ion-slide h2{ 
+    font-size: 2.4rem; 
+    text-transform: uppercase;
+}
+
+ion-slide p{
+    font-size: 1.4rem;
+    margin-bottom:0
+}
+
+ion-slide .slide-image{
+    width:50%!important;
+    max-width:100%!important;
+}
+
+ion-slide button{
+    font-size: 1.8rem!important;
+}
+
+@media only screen and (min-width: 767px) {
+
+    ion-slide h2{
+        font-size: 5rem;
+    }
+
+    ion-slide button{
+        font-size: 4rem!important;
+    }
+ 
+    ion-slide p{
+        font-size: 3rem;
+    }
+
 }
 
 

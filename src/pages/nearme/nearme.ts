@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import 'rxjs/add/operator/map';
 import { Http } from '@angular/http';
-import { Platform, NavController } from 'ionic-angular';
+import { Platform, NavController, LoadingController } from 'ionic-angular';
 import { Diagnostic } from '@ionic-native/diagnostic';
 import { Geolocation } from '@ionic-native/geolocation';
 import { InfoPage } from '../info/info';
-
-
 
 @Component({
     selector: 'page-nearme',
@@ -18,29 +16,48 @@ export class NearmePage {
     userLat: number;
     userLng: number;
 
-    constructor(public navCtrl: NavController, public diagnostic: Diagnostic, public platform: Platform, public http: Http, public geolocation: Geolocation) {
+    constructor(public loading: LoadingController, public navCtrl: NavController, public diagnostic: Diagnostic, public platform: Platform, public http: Http, public geolocation: Geolocation) {
     
-        platform.ready().then(() => {
-            geolocation.watchPosition().subscribe(pos => {
-                console.log('lat: ' + pos.coords.latitude + ', lon: ' + pos.coords.longitude);
-                if (pos.coords !== undefined) {
-                this.userLat = pos.coords.latitude;
-                this.userLng = pos.coords.longitude;
-                this.loadArtworks();
-                }
-    
-            });
-        });
     }
 
     ngAfterViewInit() {
+
+        this.checkGPS(); 
+        
+        let loader = this.loading.create({
+            content: 'Merci de patienter...',
+          });
+
+        loader.present();
+
         this.platform.ready().then(() => {
-            this.checkGPS();
+
+            var GeoOptions = {
+                timeout : 20000,
+                enableHighAccuracy: false
+            };
+
+            this.geolocation.getCurrentPosition(GeoOptions).then(() => {
+              }).catch((error) => {
+                loader.dismiss();
+                alert('Erreur lors de la récupération de votre position');
+            });
+                    
+            this.geolocation.watchPosition().subscribe(pos => {
+                console.log('lat: ' + pos.coords.latitude + ', lon: ' + pos.coords.longitude);
+                if (pos.coords !== undefined) {
+                    this.userLat = pos.coords.latitude;
+                    this.userLng = pos.coords.longitude;
+                    this.loadArtworks();
+                    loader.dismiss();
+                }    
+            });
+               
         });
+
     }
 
     loadArtworks() {
-        // alert('loadPositions exécuté');
 
         return new Promise(resolve => {
 
@@ -57,11 +74,8 @@ export class NearmePage {
                     },
                     err => {
                         console.log("Erreur suivante lors de la récupération des fresques :  " + err); // error
-                    },
-                    () => {
-                        console.log('Les fresques ont été récupérées'); // complete
-                        console.log(this.artworkList);
                     }
+
                 );
 
         });

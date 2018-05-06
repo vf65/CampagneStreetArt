@@ -1,83 +1,87 @@
-<ion-header>
-    <ion-navbar>
-        <ion-title>
-            À Propos
-        </ion-title>
-    </ion-navbar>
-</ion-header>
+    <ion-content>
+    
+        <ion-slides pager>
 
-<ion-content>
-    <img src="assets/imgs/about.jpg" alt="" class="poster" />
-    <div class="spacer-30p"></div>
+            <ion-slide style="padding:20px; background-color: #000;">
+                <img src="assets/imgs/logo.png" style="" class="slide-image" padding-top />
+                <h2 style="color: #d29b3e;">Quand les archives cinématographiques s‘affichent…</h2>
+                <p style="color:#fff;">
+                    Préparez-vous à une balade insolite à travers 25 communes du Vimeu
+                </p>
+                <button style="color:#fff!important;" (click)="nextSlide()" ion-button large clear icon-end color="primary">
+                L'Artiste
+                <ion-icon name="arrow-forward"></ion-icon>
+                </button>
+            </ion-slide>
 
-    <div class="wrap">
 
-        <div class="section content" text-center>
+            <ion-slide style="padding:20px; background-color: #fff;">
+                <img src="assets/imgs/jef-benech.png" class="slide-image" padding-top />
+                <h2 style="color: #000;">Jef Benech</h2>
+                <p style="color:#000;">
+                    Jef Benech' est un acharné du détail, un fouineur passionné, 
+                    un amoureux de la matière brute, un perfectionniste de l'imperfection, un touche à tout infatigable... 
+                    <a style="color:#000;" href="#" href="https://fr.wikipedia.org/wiki/Jef_Benech" >Lire la suite</a>
+                </p>
+                
+                <button style="color:#000!important;" (click)="nextSlide()" ion-button large clear icon-end color="primary">
+                        Les partenaires
+                        <ion-icon name="arrow-forward"></ion-icon>
+                </button>
+            </ion-slide>
+
+            <ion-slide style="padding:0 20px 20px 20px; background-color: #f3b44a;">
+                <h2 style="color: #fff;">Les Partenaires</h2>
+                
+                        <ul class="two-columns">
+                                <li>
+                                    <a href="http://ccvimeu.fr/">
+                                        <img src="assets/imgs/cc-vimeu.jpg">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.somme.fr/">
+                                        <img src="assets/imgs/somme.jpg">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.baiedesomme3vallees.fr/">
+                                        <img src="assets/imgs/bsv.jpg">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.hautsdefrance.fr/">
+                                        <img src="assets/imgs/region-hdf.jpg">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.culture.gouv.fr/">
+                                        <img src="assets/imgs/ministere-culture.jpg">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" (click)="presentFDC()">
+                                        <img src="assets/imgs/fete-cinema.jpg">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.archipop.org/">
+                                        <img src="assets/imgs/archipop.jpg">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.sitis.co/">
+                                        <img src="assets/imgs/sitis.jpg">
+                                    </a>
+                                </li>
+                            </ul>                
+                
+                <button (click)="selectTab(1)" ion-button  color="primary" icon-left large>
+                        <ion-icon style="padding-right:10px;" name="md-map"></ion-icon>
+                        Voir la carte
+                </button>
+                    
+            </ion-slide>
             
-            <img src="assets/imgs/logox500.png" style="width: 60%;" padding-top>
-            <h3 class="title">Campagne Street Art</h3>
-            <p text-left>Quand les archives cinématographiques s‘affichent…</p>
-
-            <p text-left>Le projet repose sur la réalisation de fresques issues de photogrammes eux mêmes tirés des archives audiovisuelles collectées sur le Vimeu depuis 2014. Les photogrammes sont ensuite agrandis, remontés et retravaillés. Ils sont ensuite imprimés et installés sur des supports publics et privés dans les 25 communes de la Communauté de communes.
-            </p>
-        </div>
-        <div class="section content">
-            <h3 text-center>L'artiste</h3>
-            <a href="https://mecapop.bandcamp.com/">
-                <img src="assets/imgs/jef-benech.jpg">
-                <br>
-            </a>
-            Jef Benech’
-            <br>
-            <a href="https://mecapop.bandcamp.com/">www.mecapop.org</a>
-        </div>
-        <div class="section content">
-            <h3 text-center>Les Partenaires</h3>
-            <ul>
-                <li>
-                    <a href="http://ccvimeu.fr/">
-                        <img src="assets/imgs/cc-vimeu.jpg">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.somme.fr/">
-                        <img src="assets/imgs/somme.jpg">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.baiedesomme3vallees.fr/">
-                        <img src="assets/imgs/bsv.jpg">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.hautsdefrance.fr/">
-                        <img src="assets/imgs/region-hdf.jpg">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.culture.gouv.fr/">
-                        <img src="assets/imgs/ministere-culture.jpg">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.feteducinema.com/">
-                        <img src="assets/imgs/fete-cinema.jpg">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.archipop.org/">
-                        <img src="assets/imgs/archipop.jpg">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.sitis.co/">
-                        <img src="assets/imgs/sitis.jpg">
-                    </a>
-                </li>
-            </ul>
-            <div text-center style="font-size:11px;">La Fête du Cinéma est une opération de promotion organisée par la Fédération Nationale des Cinémas Français et BNP Paribas. Elle a lieu dans les salles de cinéma partout en France, du 1er au 4 juillet 2018. www.feteducinema.com</div>
-        </div>
-
-    </div>
-
-</ion-content>
+        </ion-slides>
+    </ion-content>

@@ -20,6 +20,7 @@ export class MyApp {
   pages: Array<{title: string, component: any}>;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, geolocation: Geolocation) {
+    
     platform.ready().then(() => {
 
       // Okay, so the platform is ready.
@@ -32,12 +33,7 @@ export class MyApp {
       // splashScreen.hide();
 
       geolocation.getCurrentPosition().then((location) => {
-      
-        console.log(location);
-        
       }).catch((error) => {
-      
-        console.log('Error getting location', error);
       });
 
 

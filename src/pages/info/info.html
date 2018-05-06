@@ -1,98 +1,87 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-        {{infoArtwork.name}}
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>
+            {{infoArtwork.name}}
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <img src="{{infoArtwork.poster}}" alt="{{infoArtwork.name}}" class="poster" />
 
-  <ng-container *ngIf="infoArtwork.distance < 0.1;then video"></ng-container>
-  <ng-container *ngIf="infoArtwork.distance >= 0.1;then warning"></ng-container>
-  <ng-container *ngIf="!infoArtwork.distance;then loading"></ng-container>
-  <ng-container *ngIf="infoArtwork.distance === 'NaN';then loading"></ng-container>
+    <ng-container *ngIf="infoArtwork.distance < 0.1;then video"></ng-container>
+    <ng-container *ngIf="infoArtwork.distance >= 0.1;then warning"></ng-container>
 
-  <ng-template #loading>
-  
+    <ng-template #warning>
+
+        <img src="{{infoArtwork.poster}}" alt="{{infoArtwork.name}}" class="poster" />
+        <div class="spacer-30p"></div>
         <div class="wrap">
-                <div class="section content" text-center>
-    
-                    <img src="assets/imgs/logox500.png" style="width: 60%;" padding-top>
-                    <br>
-                    <ion-spinner name="ios"  padding-top></ion-spinner>
-      
-                    <h3 style="margin-top:0" class="title">Nous recherchons votre position</h3>
-                    <p padding-bottom>Merci de patienter quelques secondes...</p>
-    
-                </div>
+            <div class="section content" text-center>
+                <img src="assets/imgs/itinerary.jpg" alt="!" class="itinerary" padding-top />
+                <h3 class="title">Encore un peu de chemin à parcourir...</h3>
+                <p padding-bottom>Pour en savoir plus sur cette fresque, rapprochez-vous à moins de 100 mètres et revenez sur cette page. Le contenu s'affichera automatiquement.</p>
+                <button (click)="callItinerary(infoArtwork.latitude, infoArtwork.longitude, infoArtwork.name)" ion-button full color="tertiary" icon-left large margin-bottom>
+                    <ion-icon name="md-navigate"></ion-icon>
+                    Itinéraire
+                </button>
+            </div>
         </div>
+
+    </ng-template>
+
+    <ng-template #video>
         
-  </ng-template>
+        <img src="{{infoArtwork.poster}}" alt="{{infoArtwork.name}}" class="poster" />
+        <div class="spacer-30p"></div>
+        <div class="wrap">
+            <div class="section content" *ngFor="let video of infoArtwork.videos">
+                <h3 class="title">{{video.title}}</h3>
+                <p>{{video.description}}</p>
+                <video width="320" height="240" controls>
+                    <source src="{{video.url}}" type="video/mp4"> Votre appareil ne peux pas lire cette vidéo.
+                </video>
+                <h5>Détails</h5>
+                <ul>
+                    <li>
+                        <ion-icon name="md-person"></ion-icon>
+                        <b> Cinéaste :</b> {{video.filmmakers}}
+                    </li>
+                    <li>
+                        <ion-icon name="md-calendar"></ion-icon>
+                        <b> Date :</b> {{video.date}}
+                    </li>
+                    <li>
+                        <ion-icon name="md-pin"></ion-icon>
+                        <b> Lieu :</b> {{video.place}}
+                    </li>
+                    <li>
+                        <ion-icon name="md-color-fill"></ion-icon>
+                        <b> Coloration :</b> {{video.coloring}}
+                    </li>
+                    <li>
+                        <ion-icon name="md-volume-mute"></ion-icon>
+                        <b> Son :</b> {{video.sound}}
+                    </li>
+                    <li>
+                        <ion-icon name="md-camera"></ion-icon>
+                        <b> Format :</b> {{video.format}}
+                    </li>
+                    <li>
+                        <ion-icon name="md-time"></ion-icon>
+                        <b> Durée :</b> {{video.duration}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="section">
+                <button (click)="callItinerary(infoArtwork.latitude, infoArtwork.longitude)" ion-button full color="tertiary" icon-left large>
+                    <ion-icon name="md-navigate"></ion-icon>
+                    Itinéraire
+                </button>
+            </div>
+        </div>
 
-  <div class="spacer-30p"></div>
-  
-  <ng-template #warning>
+    </ng-template>
 
-      <div class="wrap">
-          <div class="section content" text-center>
-
-              <img src="assets/imgs/itinerary.jpg" alt="!" class="itinerary" padding-top />
-
-              <h3 class="title">Encore un peu de chemin à parcourir...</h3>
-              <p padding-bottom>Pour en savoir plus sur cette fresque, rapprochez-vous à moins de 100 mètres et revenez sur cette page. Le contenu s'affichera automatiquement.</p>
-        
-              <button (click)="callItinerary(infoArtwork.latitude, infoArtwork.longitude, infoArtwork.name)" ion-button full color="tertiary" icon-left large margin-bottom>
-                <ion-icon name="md-navigate"></ion-icon>
-                Itinéraire
-              </button>
-
-          </div>
-      </div>
-
-  </ng-template>
-
-  <ng-template #video>
-
-      <div class="wrap">
-
-          <div class="section content" *ngFor="let video of infoArtwork.videos">
-            
-              <h3 class="title">{{video.title}}</h3>
-              <p>{{video.description}}</p> 
-
-              <video width="320" height="240" controls>
-                <source src="{{video.url}}" type="video/mp4">
-              Votre appareil ne peux pas lire cette vidéo.
-              </video>   
-              
-              <h5>Détails</h5>
-              <ul>
-                <li><ion-icon name="md-person"></ion-icon><b> Cinéaste :</b> {{video.filmmakers}}</li>
-                <li><ion-icon name="md-calendar"></ion-icon><b> Date :</b> {{video.date}}</li>
-                <li><ion-icon name="md-pin"></ion-icon><b> Lieu :</b> {{video.place}}</li>
-                <li><ion-icon name="md-color-fill"></ion-icon><b> Coloration :</b> {{video.coloring}}</li>
-                <li><ion-icon name="md-volume-mute"></ion-icon><b> Son :</b> {{video.sound}}</li>
-                <li><ion-icon name="md-camera"></ion-icon><b> Format :</b> {{video.format}}</li>
-                <li><ion-icon name="md-time"></ion-icon><b> Durée :</b> {{video.duration}}</li>
-              </ul>
-
-          </div>
-
-      </div>
-
-      <div class="wrap">
-          <div class="section">
-              <button (click)="callItinerary(infoArtwork.latitude, infoArtwork.longitude)" ion-button full color="tertiary" icon-left large>
-                <ion-icon name="md-navigate"></ion-icon>
-                Itinéraire
-              </button>
-          </div>
-      </div>
-        
-  </ng-template>
-
-
-  
 </ion-content>

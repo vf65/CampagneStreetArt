@@ -1,39 +1,15 @@
 <ion-content>
 
-<ng-container *ngIf="userLat;then locations else loading"></ng-container>
+        <ion-list no-border no-lines>
 
-<ng-template #loading>
+            <ion-item (click)="showInfo(location)" *ngFor="let location of artworkList">
+                <ion-icon name='marker' item-start></ion-icon>
+                {{location.name}}
+                <ion-note item-end *ngIf="location.distance != null">
+                    {{location.distance}} km
+                </ion-note>
+            </ion-item>
 
-        <div class="wrap">
-            <div class="section content" text-center>
+        </ion-list>
 
-                <img src="assets/imgs/logox500.png" style="width: 60%;" padding-top>
-                <br>
-                <ion-spinner name="ios"  padding-top></ion-spinner>
-  
-                <h3 style="margin-top:0" class="title">Nous recherchons votre position</h3>
-                <p padding-bottom>Merci de patienter quelques secondes...</p>
-
-            </div>
-        </div>
-  
-</ng-template>
-  
-
-<ng-template #locations>
-      
-  <ion-list no-border no-lines>
-
-      <ion-item (click)="showInfo(location)" *ngFor="let location of artworkList">
-          <ion-icon name='marker' item-start></ion-icon>
-          {{location.name}}
-          <ion-note item-end *ngIf="location.distance != null">
-          {{location.distance}} km
-          </ion-note>
-      </ion-item>
-
-
-  </ion-list>
-
-  </ng-template>
-
+</ion-content>

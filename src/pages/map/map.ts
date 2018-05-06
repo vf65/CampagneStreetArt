@@ -1,7 +1,7 @@
   import { Component } from '@angular/core';
   import { GoogleMaps, GoogleMap, GoogleMapsEvent, GoogleMapOptions } from '@ionic-native/google-maps';
   import { Geolocation } from '@ionic-native/geolocation';
-  import { Platform, NavController } from 'ionic-angular';
+  import { Platform, NavController, LoadingController } from 'ionic-angular';
   import { MapStyle } from './map-style';
   import { Http } from '@angular/http';
   import 'rxjs/add/operator/map';
@@ -20,43 +20,63 @@
     userLat: number;
     userLng: number;
 
-    constructor(public navCtrl: NavController, public diagnostic: Diagnostic, public platform: Platform, public http: Http, public geolocation: Geolocation) {
-        
-        platform.ready().then(() => {
-            geolocation.watchPosition().subscribe(pos => {
-                console.log('lat: ' + pos.coords.latitude + ', lon: ' + pos.coords.longitude);
-                if (pos.coords !== undefined) {
-                this.userLat = pos.coords.latitude;
-                this.userLng = pos.coords.longitude;
-                this.loadDistance();
-                }
-    
-            });
-        });
+    constructor(public loading: LoadingController, public navCtrl: NavController, public diagnostic: Diagnostic, public platform: Platform, public http: Http, public geolocation: Geolocation) {
 
     }
 
     ngAfterViewInit() {
+
+        this.checkGPS(); 
+        
+        let loader = this.loading.create({
+            content: 'Merci de patienter...',
+          });
+
+        loader.present();
+
         this.platform.ready().then(() => {
-            // this.loadUserPosition();
+
             this.loadArtworks();
             this.loadMap();
             this.checkGPS();
+            
+            var GeoOptions = {
+                timeout : 20000,
+                enableHighAccuracy: false
+            };
+
+            this.geolocation.getCurrentPosition(GeoOptions).then(() => {
+              }).catch((error) => {
+                loader.dismiss();
+                alert('Erreur lors de la récupération de votre position');
+            });
+                    
+            this.geolocation.watchPosition().subscribe(pos => {
+                console.log('lat: ' + pos.coords.latitude + ', lon: ' + pos.coords.longitude);
+                if (pos.coords !== undefined) {
+                    this.userLat = pos.coords.latitude;
+                    this.userLng = pos.coords.longitude;
+                    this.loadDistance();
+                    loader.dismiss();
+                }    
+            });
+               
         });
+
     }
-  
+
 
     loadDistance() {
 
         return new Promise(resolve => {
-    
+
             this.artworkList = this.applyHaversine(this.artworkList);
             resolve(this.artworkList);
-    
+
         });
-    
+
     }
-    
+
 
     loadArtworks() {
         // alert('loadPositions exécuté');
@@ -66,7 +86,7 @@
             this.http.get('assets/data/artwork.json')
                 .map(res => res.json())
                 .subscribe(data => {
-                        
+
                         this.artworkList = data.artworks;
                         resolve(this.artworkList);
                     },
@@ -84,7 +104,7 @@
     }
 
     loadMap() {
-  
+
         let mapOptions: GoogleMapOptions = {
             styles: MapStyle,
             camera: {
@@ -99,21 +119,21 @@
         };
 
         this.map = GoogleMaps.create('map_canvas', mapOptions);
-  
+
         // Wait the MAP_READY before using any methods.
         this.map.one(GoogleMapsEvent.MAP_READY)
             .then(() => {
                 console.log('La carte est opérationelle');
                 // alert('La carte est opérationelle');
-    
+
                 for (let _i = 0; _i < this.artworkList.length; _i++) {
-  
+
                     // Incrémentation du tableau des bornes
                     this.artworkBounds.push({
                         lat: this.artworkList[_i].latitude,
                         lng: this.artworkList[_i].longitude
                     });
-  
+
                     // Ajout des marqueurs
                     this.map.addMarker({
                             icon: {
@@ -137,14 +157,14 @@
                                 });
                         });
                 }
-  
+
                 this.map.animateCamera({
                     target: this.artworkBounds,
                     duration: 3000
                 });
-  
+
             });
-  
+
     }
 
 
@@ -212,12 +232,12 @@
     toRad(x) {
         return x * Math.PI / 180;
     }
-  
+
     showInfo(artwork) {
         // alert('map: ' + JSON.stringify(artwork));
         this.navCtrl.push(InfoPage, {
-            artwork: artwork 
+            artwork: artwork
         });
     }
-  
-  }
+
+}
